@@ -14,13 +14,13 @@ $( document ).ready(function() {
 
 $( document ).ready(function() {
 
-    $('.owl-carousel').owlCarousel({
+    $('.owl-slider-1').owlCarousel({
         loop:true,
         margin:0,
         nav:true,
         autoplay: true,
         dots: true,
-        autoplayTimeout: 5000,
+        autoplayTimeout: 8000,
         navText:['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
         responsive:{
             0:{
@@ -34,6 +34,21 @@ $( document ).ready(function() {
             }
         }
     })
+
+ $('.owl-slider-2').owlCarousel({
+    items:4,
+     loop:true,
+    margin:10,
+    autoplay:true,
+    autoplayTimeout:3000,
+    autoplayHoverPause:true,
+});
+$('.play').on('click',function(){
+    owl.trigger('play.owl.autoplay',[1000])
+})
+$('.stop').on('click',function(){
+    owl.trigger('stop.owl.autoplay')
+})
 
 
 });
